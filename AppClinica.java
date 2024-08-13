@@ -14,11 +14,11 @@ public class AppClinica {
 		do {
 			
 			System.out.println("Seja Bem-vindo a nossa Clínica!"
-					+ "/nSelecione um de nossos serviços dentre as opções abaixo"
-					+ "/n1 - Cadastrar"
-					+ "/n2- Consultar"
-					+ "/n3 - Imprimir Cadastro"
-					+ "/n4 - Sair");
+					+ "\nSelecione um de nossos serviços dentre as opções abaixo"
+					+ "\n1 - Cadastrar"
+					+ "\n2- Consultar"
+					+ "\n3 - Imprimir Cadastro"
+					+ "\n4 - Sair");
 			opcao = sc.nextInt();
 			sc.nextLine();
 			
@@ -34,6 +34,7 @@ public class AppClinica {
 		
 		System.out.println("CPF:");
 		Long cpf = sc.nextLong();
+		sc.nextLine();
 		
 		System.out.println("Data de Nascimento:");
 		String DataNascimento = sc.nextLine();
@@ -41,8 +42,7 @@ public class AppClinica {
 		System.out.println("Historico:");
 		String Historico = sc.nextLine();
 	
-	
 		Paciente paciente = new Paciente(nome, cpf, DataNascimento, Historico);
+		
 	}
-
 }
