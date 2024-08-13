@@ -49,16 +49,21 @@ public class VetPaciente {
 	}
 	
 		public Boolean remove(Long cpf, Paciente paciente) {
-			for(int i = 0; i < nElem; i++) {
-				if(cpf.equals(paciente.getCPF())) {
-					
-					return true;
-				}
+			
+			int pos = pesquisa(cpf);
+			
+			if(pos == -1) {
 				return false;
 			}
+			
+			for (int i = pos; i < nElem; i++) {
+				vet[i] = vet[i + 1];
+			}
+			
+			vet[nElem -1] = null;
+			nElem--;
+			return true;
 		}
-	
-	 
 	 
 }
 
