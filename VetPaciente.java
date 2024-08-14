@@ -7,7 +7,7 @@ public class VetPaciente {
 	Paciente[] vet;
 	int nElem;
 	
-	public VetPaciente(Paciente[] vet, int nElem) {
+	public VetPaciente() {
 		nElem = 0;
 		this.vet = new Paciente[10];
 	}
@@ -24,7 +24,7 @@ public class VetPaciente {
 		}
 	}
 	
-	 public int pesquisa(Long cpf) {
+	 public int pesquisa(String cpf) {
 		 for(int i = 0; i < nElem; i++) {
 			 if (cpf.equals(vet[i].getCPF())) {  //O método equals dessa linha serve para comparações do tipo LONG, tem o mesmo valor de '=='
 				 return i;
@@ -34,7 +34,7 @@ public class VetPaciente {
 	 
 	public int insere(Paciente paciente) {
 		
-		if(vet.length >= nElem) {
+		if(nElem >= vet.length) {
 			return -1;
 		}
 		
@@ -48,7 +48,7 @@ public class VetPaciente {
 		return 0;
 	}
 	
-		public Boolean remove(Long cpf, Paciente paciente) {
+		public Boolean remove(String cpf, Paciente paciente) {
 			
 			int pos = pesquisa(cpf);
 			
@@ -66,4 +66,3 @@ public class VetPaciente {
 		}
 	 
 }
-
