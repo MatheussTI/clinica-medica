@@ -3,11 +3,11 @@ package entidades;
 public class Paciente {
 	
 	private String nome;
-	private Long CPF;
+	private String CPF;
 	private String DataNascimento;
 	private String Historico;
 	
-	public Paciente(String nome, Long CPF, String DataNascimento, String Historico) {
+	public Paciente(String nome, String CPF, String DataNascimento, String Historico) {
 		this.nome = nome;
 		this.CPF = CPF;
 		this.DataNascimento = DataNascimento;
@@ -19,11 +19,11 @@ public class Paciente {
 	}
 	public void setNome(String nome) {
 		this.nome = nome; 
-	}
-	public Long getCPF() {
+	}	
+	public String getCPF() {
 		return CPF;
 	}
-	public void setCPF(Long cPF) {
+	public void setCPF(String cPF) {
 		CPF = cPF;
 	}
 	public String getDataNascimento() {
